@@ -10,7 +10,12 @@ function App() {
     firstName: "Amanda",
     lastName: "Taylor",
     position: "Model",
-    isFemale: true
+    isFemale: true,
+    socialStats: {
+      views: 1388,
+      like: 970,
+      followers: 554,
+    },
   };
   return (
     <article className="cardUser">
@@ -21,43 +26,45 @@ function App() {
         isFemale={userCard.isFemale}
       />
       <UserButton />
-      <UserSocial />
+      <UserSocial socialStats={userCard.socialStats} />
     </article>
   );
 }
 
 function ComponentUser(props) {
-  const { src, userName, userPosition,isFemale } = props;
- 
-  const userColor = isFemale ? 'wight': 'rgb(27, 27, 27)';
+  const { src, userName, userPosition, isFemale } = props;
+
+  const userColor = isFemale ? "white" : "rgb(27, 27, 27)";
   return (
     <>
       <img src={src} alt="Model"></img>
-      <div className="cardUserName" style={{color:userColor}}>{userName}</div>
+      <div className="cardUserName" style={{ color: userColor }}>
+        {userName}
+      </div>
       <div className="cardUserPosition">{userPosition}</div>
     </>
   );
 }
 
-
 function UserButton() {
   return <button className="cardUserButton">+</button>;
 }
 
-function UserSocial() {
+function UserSocial(props) {
+  const { socialStats } = props;
   return (
     <div className="social">
       <div>
         <span className="socialInfo">Views</span>
-        <span className="socialСalculation">1388</span>
+        <span className="socialСalculation">{socialStats.views}</span>
       </div>
       <div>
         <span className="socialInfo">Like</span>
-        <span className="socialСalculation">970</span>
+        <span className="socialСalculation">{socialStats.like}</span>
       </div>
       <div>
         <span className="socialInfo">Followers</span>
-        <span className="socialСalculation">554</span>
+        <span className="socialСalculation">{socialStats.followers}</span>
       </div>
     </div>
   );
