@@ -10,7 +10,7 @@ body{
 
 .cardUser{
     margin-top: 20px;
-    max-width: 400px;
+    max-width: 380px;
     width: 100%;
     box-shadow: 0 0 5px rgb(68, 67, 68);
     display: flex;
@@ -24,19 +24,19 @@ body{
 
 .cardUserName{
     margin-top: -100px;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bolder;
     color: white;
 }
 
 .cardUserPosition{
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
 }
 
 .cardUserButton{
-    margin-top: 15px;
+    margin-top: 6px;
     border-radius: 50%;
     border: none;
     width: 70px;
@@ -58,6 +58,7 @@ body{
     flex-direction: column; 
     text-align: center; 
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .socialInfo{
     color: rgb(100, 99, 99);

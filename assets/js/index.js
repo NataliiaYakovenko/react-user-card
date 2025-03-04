@@ -33,17 +33,19 @@ function ComponentUser(props) {
       <div className="social">
         <div>
           <span className="socialInfo">Views</span>
-          <span className="socialСalculation">988</span>
+          <span className="socialСalculation">1388</span>
         </div>
         <div>
           <span className="socialInfo">Like</span>
-          <span className="socialСalculation">700</span>
+          <span className="socialСalculation">970</span>
         </div>
         <div>
-          <span className="socialInfo">Dislike</span>
-          <span className="socialСalculation">68</span>
+          <span className="socialInfo">Followers</span>
+          <span className="socialСalculation">554</span>
         </div>
       </div>
     </>
   );
 }
+
+
